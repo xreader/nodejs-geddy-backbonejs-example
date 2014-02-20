@@ -1,0 +1,20 @@
+<div class="control-group">
+  <label for="title" class="control-label">title</label>
+  <div class="controls">
+    <%- contentTag('input', todo.title, {type:'text', class:'span6', name:'title'}) %>
+  </div>
+</div>
+<div class="control-group">
+  <label for="completed" class="control-label">completed</label>
+  <div class="controls">
+    <select name="completed", class="span1">
+      <% if(todo.completed) { -%>
+      <option>false</option>
+      <option selected>true</option>
+      <% } else { -%>
+      <option selected>false</option>
+      <option>true</option>
+      <% } -%>
+    </select>
+  </div>
+</div>
